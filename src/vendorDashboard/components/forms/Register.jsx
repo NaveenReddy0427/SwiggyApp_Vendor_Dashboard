@@ -2,7 +2,7 @@
 const Register = () => {
   return (
     <div className="registerSection">
-        <form>
+        <form className="authForm">
             <h3>Vendor Regiter</h3>
             <label>Username</label>
             <input type="text" placeholder="Enter your username"/><br/>
@@ -11,7 +11,7 @@ const Register = () => {
             <label>Password</label>
             <input type="password" placeholder="Enter your password"/><br/>
             <div className="btnSubmit">
-                <button>Register</button>
+                <button>Submit</button>
             </div>
         </form>
     </div>

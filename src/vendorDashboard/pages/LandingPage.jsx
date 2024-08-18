@@ -1,3 +1,5 @@
+import AddFirm from "../components/forms/AddFirm"
+import AddProduct from "../components/forms/AddProduct"
 import Login from "../components/forms/Login"
 import Register from "../components/forms/Register"
 import NavBar from "../components/NavBar"
@@ -11,6 +13,8 @@ const LandingPage = () => {
             <SideBar/>
             <Login/>
             <Register/>
+            <AddFirm/>
+            <AddProduct/>
         </div>
     </div>
   )
