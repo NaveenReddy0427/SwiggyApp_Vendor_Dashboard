@@ -1,4 +1,5 @@
 import LandingPage from "./vendorDashboard/pages/LandingPage"
+import "./App.css"
 
 const App = () => {
   return (
