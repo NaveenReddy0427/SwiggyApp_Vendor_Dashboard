@@ -1,5 +1,5 @@
 
-const NavBar = () => {
+const NavBar = ({showLoginHandler, showRegisterHandler}) => {
 
   return (
     <div className="navSection">
@@ -10,8 +10,8 @@ const NavBar = () => {
         <div className="firmName">
         </div>
         <div className="userAuth">
-           <span>Login / </span>
-           <span>Register</span>
+           <span onClick={showLoginHandler}>Login / </span>
+           <span onClick={showRegisterHandler}>Register</span>
         </div>
     </div>
   )
