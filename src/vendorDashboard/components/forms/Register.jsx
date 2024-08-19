@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { API_URL } from "../../data/apiPath.js"
 
-const Register = () => {
+const Register = ({showLoginHandler}) => {
 
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
@@ -28,6 +28,7 @@ const Register = () => {
                 setEmail("")
                 setPassword("")
                 alert("Vendor registered successfully");
+                showLoginHandler()
             }else{
                 alert("Registration Failed, Contact Admin")
             }

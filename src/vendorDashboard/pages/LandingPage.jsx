@@ -5,6 +5,7 @@ import Login from "../components/forms/Login"
 import Register from "../components/forms/Register"
 import NavBar from "../components/NavBar"
 import SideBar from "../components/SideBar"
+import Welcome from "../components/Welcome"
 
 const LandingPage = () => {
 
@@ -12,6 +13,7 @@ const LandingPage = () => {
     const [showRegister, setShowRegister] = useState(false)
     const [showFirm, setShowFirm] = useState(false)
     const [showProduct, setShowProduct] = useState(false)
+    const [showWelcome, setShowWelcome] = useState(false)
 
 
     const showLoginHandler = ()=>{
@@ -42,16 +44,25 @@ const LandingPage = () => {
         setShowFirm(false)
     }
 
+    const showWelcomeHandler = ()=>{
+        setShowProduct(false)
+        setShowLogin(false)
+        setShowRegister(false)
+        setShowFirm(false)
+        setShowWelcome(true)
+    }
+
 
   return (
     <div className="landingSection">
         <NavBar showLoginHandler={showLoginHandler} showRegisterHandler={showRegisterHandler}/>
         <div className="collectionSection">
             <SideBar showFirmHandler={showFirmHandler} showProductHandler={showProductHandler} />
-            {showLogin && <Login/>}
-            {showRegister && <Register/>}
+            {showLogin && <Login showWelcomeHandler={showWelcomeHandler}/>}
+            {showRegister && <Register showLoginHandler={showLoginHandler}/>}
             {showFirm && <AddFirm/>}
             {showProduct && <AddProduct/>}
+            {showWelcome && <Welcome/>}
         </div>
     </div>
   )
