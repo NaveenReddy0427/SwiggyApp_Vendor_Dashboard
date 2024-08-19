@@ -27,7 +27,9 @@ const LandingPage = () => {
         setShowRegister(true)
         setShowLogin(false)
         setShowFirm(false)
-        setShowProduct
+        setShowProduct(false)
+        setShowWelcome(false)
+
     }
 
     const showFirmHandler = ()=>{
@@ -35,6 +37,8 @@ const LandingPage = () => {
         setShowLogin(false)
         setShowRegister(false)
         setShowProduct(false)
+        setShowWelcome(false)
+
     }
 
     const showProductHandler = ()=>{
@@ -42,6 +46,8 @@ const LandingPage = () => {
         setShowLogin(false)
         setShowRegister(false)
         setShowFirm(false)
+        setShowWelcome(false)
+        
     }
 
     const showWelcomeHandler = ()=>{
