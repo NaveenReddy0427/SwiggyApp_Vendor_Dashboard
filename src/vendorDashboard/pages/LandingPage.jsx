@@ -21,6 +21,7 @@ const LandingPage = () => {
         setShowRegister(false)
         setShowFirm(false)
         setShowProduct(false)
+        setShowWelcome(false)
     }
 
     const showRegisterHandler = ()=>{
